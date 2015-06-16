@@ -1,7 +1,21 @@
+body {
+    background: #eee;
+    margin:0;
+    padding:0;    
+    line-height: normal;
+    font-size: 100%;
+}
+
+body, 
+div, 
+button, 
+input {
+    font-family: consolas, menlo, monaco, courier, monospace;
+}
 /*the holder*/
 .holder {
     margin: 20px 0;
-    display: inline-block;
+    text-align: center;
 }
 
 /*text input and .animation div elements*/
