@@ -1,0 +1,58 @@
+/*the holder*/
+.holder {
+    margin: 20px 0;
+    display: inline-block;
+}
+
+/*text input and .animation div elements*/
+.inp,
+.animation {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.5em;
+    height: 1.5em;
+}
+
+/*this is the blinking pseudo-element*/
+.animation:after {
+    content: "|";
+    position: relative;
+    left: -2px;
+    top: -2px;
+    font-size: 22px;
+    animation: blink 1s infinite;
+    -webkit-animation: blink 1s infinite;
+}
+
+/*these are the animation keyframes*/
+@keyframes blink {
+    0%, 50% {
+        opacity: 0
+    }
+    51%,
+    100% {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes blink {
+    0%, 50% {
+        opacity: 0
+    }
+    51%,
+    100% {
+        opacity: 1
+    }
+}
+
+/*centering the .holder div content*/
+.holder {
+    text-align: center
+}
+
+/*button style*/
+.btn {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1.5em;
+}
