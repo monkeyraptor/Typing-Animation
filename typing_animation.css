@@ -27,6 +27,10 @@ input {
     height: 1.5em;
 }
 
+.animation {
+    height: 100%;
+}
+
 /*this is the blinking pseudo-element*/
 .animation::after {
     content: "|";
