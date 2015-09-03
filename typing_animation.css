@@ -70,3 +70,9 @@ input {
     border-radius: 5px;
     font-size: 1.5em;
 }
+
+/*stop animation class*/
+.stopAnimate::after {
+    animation: none;
+    -webkit-animation: none;
+}
