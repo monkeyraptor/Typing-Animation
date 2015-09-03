@@ -28,7 +28,7 @@ input {
 }
 
 /*this is the blinking pseudo-element*/
-.animation:after {
+.animation::after {
     content: "|";
     position: relative;
     left: -2px;
