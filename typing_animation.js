@@ -1,7 +1,5 @@
 // Version 2015-09-03
 // Additional: toggling class to control the blinking element
-// Version 2015-09-03
-// Additional: adding a <style> tag to control the [::after] element blinking
 function typingAnimation(d) {
     "use strict";
     var q = function (a) {
