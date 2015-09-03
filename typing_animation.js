@@ -47,7 +47,7 @@ function typingAnimation(d) {
         }
     }
     function buttonClick() {
-        interval = setInterval(appearingChars, 200);
+        interval = setInterval(appearingChars, 100);
         button.disabled = 1;
     }
 
