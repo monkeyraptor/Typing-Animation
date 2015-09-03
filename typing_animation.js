@@ -5,7 +5,7 @@ function typingAnimation(d) {
     var q = function (a) {
             return d.querySelector(a);
         },
-        input_text = q("#inp"), //input element
+        inputText = q("#inp"), //input element
         button = q("#start"), //button trigger
         output = q("#text_wrap"), //the output
         head = q("head"),
@@ -27,12 +27,12 @@ function typingAnimation(d) {
         }
     }
     function clickFocus() {
-        input_text.value = "";
+        inputText.value = "";
         output.innerHTML = "";
         button.disabled = 0;
     }
-    function appearing_character() {
-        var split_input = input_text.value.split("");
+    function appearingChars() {
+        var split_input = inputText.value.split("");
         stopAnimation();
         if (!split_input) {
             interval = clearInterval(interval);
@@ -49,13 +49,13 @@ function typingAnimation(d) {
         }
     }
     function buttonClick() {
-        interval = setInterval(appearing_character, 200);
+        interval = setInterval(appearingChars, 200);
         button.disabled = 1;
     }
 
     //TRIGGERS
-    input_text.onclick = clickFocus;
-    input_text.onfocus = clickFocus;
+    inputText.onclick = clickFocus;
+    inputText.onfocus = clickFocus;
     button.onclick = buttonClick;
 }
 typingAnimation(document);
