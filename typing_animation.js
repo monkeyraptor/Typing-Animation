@@ -1,5 +1,5 @@
 // Version 2015-09-03
-// Additional: adding a <style> tag to control the [::after] element blinking
+// Additional: toggling class to control the blinking element
 function typingAnimation(d) {
     "use strict";
     var q = function (a) {
@@ -7,24 +7,12 @@ function typingAnimation(d) {
         },
         inputText = q("#inp"), //input element
         button = q("#start"), //button trigger
-        output = q("#text_wrap"), //the output
-        head = q("head"),
+        output = q("#text_wrap"), //the output (this has the ::after)
         interval, //timer
         counter = -1; //counter
 
     function stopAnimation() {
-        var style,
-            content = ".animation::after{animation:none;-webkit-animation:none}";
-        if (!q("#stopAnimation")) {
-            style = d.createElement("style");
-            style.id = "stopAnimation";
-            style.innerHTML = content;
-            head.appendChild(style);
-        } else {
-            if (!q("#stopAnimation").innerHTML) {
-                q("#stopAnimation").innerHTML = content;
-            }
-        }
+        output.className = "animation stopAnimate"; //add "stopAnimate" class
     }
     function clickFocus() {
         inputText.value = "";
@@ -43,7 +31,7 @@ function typingAnimation(d) {
                 output.innerHTML += split_input[counter];
             } else {
                 counter = -1;
-                q("#stopAnimation").innerHTML = "";
+                output.className = "animation"; //remove the "stopAnimate" class.
                 clearInterval(interval);
             }
         }
