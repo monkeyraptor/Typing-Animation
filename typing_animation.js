@@ -34,7 +34,7 @@ function typingAnimation(d) {
         if (!split_input.length) {
             output.innerHTML = "enter sumthin";
             animate();
-            interval = clearInterval(interval);
+            clearInterval(interval);
         } else {
             counter += 1;
             if (counter < split_input.length) {
